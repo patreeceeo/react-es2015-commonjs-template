@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+		<title>Javascript Favicon ICO Creator! - Peter Coles' Personal Blog</title>
+		<meta name="description" content="A favicon (.ico) image generator, written purely in javascript." />
+    <link rel="stylesheet" href="/src/chunkypaint/chunkypaint.css">
+    <script src="/build/chunkypaint.js"></script>
+    <script src="/src/chunkypaint/chunkypaint.js"></script><!-- TODO: delete -->
+	</head>
+	<body class="dim16">
+		<h1>Javascript Favicon Creator <sup>&laquo;greek letter here&raquo;</sup></h1>
+		<p id="nav">
+		  <a id="nav16" href="?">16px favicon</a> |
+		  <a id="nav32" href="?size=32">32px favicon</a> | 
+		<div id="wrap">
+			<div id="main"><div style="padding:10px; margin:0;"><noscript>Draw and create your own favicons immediately! However, first, you must enable javascript.</noscript></div></div>
+			<div id="tools">
+				<div class="tools_widget" id="color_pallet">
+					<div class="pallet_option" id="pallet1" style="background-color: #f00;"></div>
+					<div class="pallet_option" id="pallet2" style="background-color: #0f0;"></div>
+					<div class="pallet_option" id="pallet3" style="background-color: #00f;"></div>
+					<div class="pallet_option" id="pallet4" style="background-color: #ff0;"></div>
+					<div class="pallet_option" id="pallet5" style="background-color: #0ff;"></div>
+					<div class="pallet_option" id="pallet6" style="background-color: #f0f;"></div>
+					<div class="pallet_option" id="pallet7" style="background-color: #000;"></div>
+					<div class="pallet_option" id="pallet8" style="background-color: #fff;"></div>
+					<div style="clear:both;"></div>
+				</div>
+				<div class="tools_widget" id="cur_color">
+					<div id="cur_color_inside"></div>
+					<div style="clear:both;"></div>
+				</div>
+				<div class="tools_widget tools_widget_tools">
+					<div class="tool_type" id="brush">~ brush</div>
+					<div class="tool_type" id="bucket">0 bucket</div>
+					<div class="tool_type" id="eraser">X eraser</div>
+				</div>
+				<div>
+					<a href="#" onclick="return paint.actions.customColor()">Custom Color</a><br />
+					<a href="#" onclick="return paint.actions.selectColor()" id="eyedropper" title="this only works inside the paint-able area">Eyedropper Tool</a><br />
+					<a href="#" onclick="return paint.actions.toggleGrid()">Toggle Grid</a><br />
+				</div>
+			</div>
+		</div>
+		<p>
+		  <button onclick="return paint.actions.generateImg()">Generate Favicon &raquo;</button><br /><br /><br />
+		  transparent bg:
+		  <a href="#" onclick="return paint.actions.setBg('')">white</a> |
+		  <a href="#" onclick="return paint.actions.setBg('checkered-bg.png')">checkered</a>
+		</p>
+		<p>
+		  This tool lets you generate your own .ICO files that you can use as web site favicons. It is written entirely in Javascript (no lame-o server requests) and it does *not* use the HTML5 canvas element to create the data url (you probably don’t care, but I think that’s pretty cool). If you’re looking to generate a really fancy and pretty favicon.ico file, then you’re probably at the wrong place. You can read more about this tool and/or report any bugs/praise/blame on <a href="http://mrcoles.com/blog/javascript-favicon-creator/">this blog post announcing the favicon creator</a>.
+		</p>
+		<p>
+		  You can add your generated favicon to your site by naming it “favicon.ico” and placing it in the root directory of your website (/favicon.ico), or by including this on a page and linking to the proper file:
+		  <code><pre>
+    &lt;link id=&quot;favicon&quot; rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;favicon.ico&quot; /&gt;
+		  </pre></code>
+		</p>
+		<br /><hr />
+		<div>
+			<p>
+			  Brought to you by <a href="http://mrcoles.com">Peter Coles</a> |
+			  More info on <a href="http://mrcoles.com/blog/making-images-byte-by-byte-javascript/">how it works</a>
+			</p>
+		</div>
+	</body>
+</html>
