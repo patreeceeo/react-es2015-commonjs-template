@@ -16,8 +16,10 @@
 require("es5-shim");
 require("html5shiv");
 
-!(function (React, ReactDOM) {
-  var LikeButton = React.createClass({
+module.exports = (function (React) {
+  "use strict";
+
+  return React.createClass({
     getInitialState: function() {
       return {liked: false};
     },
@@ -34,9 +36,4 @@ require("html5shiv");
       );
     }
   });
-
-  ReactDOM.render(
-    <LikeButton className="special" style={{color: "blue"}}/>,
-    document.getElementById("chunkypaint")
-  );
-})(require("react"), require("react-dom"));
+})(require("react"));

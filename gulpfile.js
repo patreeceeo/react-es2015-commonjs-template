@@ -10,7 +10,7 @@ gulp.task("default", function(){
     entries: "./src/chunkypaint/chunkypaint.jsx", 
     debug: true
   })
-  .transform("babelify", {presets: ["react"]})
+  .transform("babelify")
   .bundle()
   .pipe(source("chunkypaint.js"))
   .pipe(gulp.dest("build"));
