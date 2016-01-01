@@ -11,6 +11,10 @@
  */
 /* global require */
 
+/* Required for React to work in elderly browsers
+*/
+require("es5-shim");
+require("html5shiv");
 
 !(function (React, ReactDOM) {
   var LikeButton = React.createClass({

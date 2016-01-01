@@ -4,8 +4,10 @@
   "description": "a raster drawing program for the web",
   "main": "index.js",
   "dependencies": {
-    "react-dom": "^0.14.5",
-    "react": "^0.14.5"
+    "es5-shim": "^4.4.1",
+    "html5shiv": "^3.7.3",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
   },
   "devDependencies": {
     "babel": "^6.3.26",
