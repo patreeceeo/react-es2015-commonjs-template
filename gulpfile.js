@@ -6,8 +6,10 @@ var browserify = require("browserify");
 
 gulp.task("default", function(){
   "use strict";
-  browserify({
-    entries: "./src/chunkypaint/chunkypaint.jsx", 
+  browserify([
+    "./src/app.js",
+    "./src/chunkypaint/chunkypaint.jsx"
+  ], {
     debug: true
   })
   .transform("babelify")
@@ -16,9 +18,10 @@ gulp.task("default", function(){
   .pipe(gulp.dest("build"));
 });
 
-/* NOTE: when you need to watch for new or deleted files, switch 
+/* NOTE: when you need to watch for new or deleted files, switch
  * to the gulp-watch plugin
  */
 gulp.task("watch", function () {
-  gulp.watch("./src/chunkypaint/chunkypaint.jsx", ["default"]);
+  "use strict";
+  gulp.watch("./src/**", ["default"]);
 });

@@ -13,8 +13,6 @@
 
 /* Required for React to work in elderly browsers
 */
-require("es5-shim");
-require("html5shiv");
 
 module.exports = (function (React) {
   "use strict";
