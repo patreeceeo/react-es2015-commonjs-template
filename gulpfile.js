@@ -3,6 +3,8 @@
 var gulp = require("gulp");
 var source = require("vinyl-source-stream");
 var browserify = require("browserify");
+var watch = require("gulp-watch");
+var batch = require("gulp-batch");
 
 gulp.task("default", function(){
   "use strict";
@@ -23,5 +25,7 @@ gulp.task("default", function(){
  */
 gulp.task("watch", function () {
   "use strict";
-  gulp.watch("./src/**", ["default"]);
+  watch("./src/**/*.js", batch(function (events, done) {
+    gulp.start("default", done);
+  }));
 });
