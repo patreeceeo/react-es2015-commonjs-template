@@ -1,4 +1,6 @@
 
+/* Cribbed from https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html
+*/
 var React = require("react");
 
 module.exports = React.createClass({

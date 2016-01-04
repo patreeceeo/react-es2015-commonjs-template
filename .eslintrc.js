@@ -1,8 +1,18 @@
 /* global module */
 module.exports = {
   "rules": {
+    /*
+     * Warn about React not being defined in a file that uses JSX.
+     */
     "react/react-in-jsx-scope": 1,
+    /*
+     * Do not warn about React not being explicitly used in a file that uses
+     * JSX.
+     */
     "react/jsx-uses-react": 1,
+    /*
+     * Do not warn about unused vars if the vars are only used in JSX.
+     */
     "react/jsx-uses-vars": 1,
     "no-trailing-spaces": [ 1 ],
     "no-unused-expressions": [

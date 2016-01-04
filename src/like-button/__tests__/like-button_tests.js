@@ -15,7 +15,7 @@ jest.dontMock("../like-button");
  * Also http://reactcheatsheet.com/
  */
 
-describe("like-button", function () {
+describe("LikeButton", function () {
   "use strict";
 
   var LikeButton;
