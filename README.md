@@ -54,6 +54,8 @@ my-project/
       - shared-component-1/
         - index.js
         - a-private-dependency.js
+        __tests__
+          - a-private-dependency_tests.js
       - shared-component-2/
         Analogous to the structure for shared-component-1
 
@@ -67,6 +69,15 @@ my-project/
 ```bash 
 git clone https://github.com/pzatrick/react-es2015-commonjs-template.git my-project
 cd my-project
+
+# The next two lines sqaush all of my commits into one commit by you (optional)
+git update-ref -d refs/heads/master
+git commit -s -m "Initial commit based on https://github.com/pzatrick/react-es2015-commonjs-template"
+
+# Don't forget to set up a git remote
+git remote set-url origin https://github.com/me/my-project.git
+git push -u origin master
+
 npm install
 npm install -g eslint # If you want to use eslint 
 ```
