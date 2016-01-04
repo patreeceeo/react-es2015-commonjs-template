@@ -2,7 +2,7 @@
   "name": "PROJECT_NAME",
   "version": "0.0.1",
   "description": "PROJECT_DESCRIPTION",
-  "main": "src/app.js",
+  "main": "src/index.js",
   "dependencies": {
     "es5-shim": "^4.4.1",
     "html5shiv": "^3.7.3",
